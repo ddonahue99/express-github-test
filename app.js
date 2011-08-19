@@ -45,8 +45,8 @@ app.get('/', function(req, res){
 });
 
 app.get('/github', protect, function(req, res){
-  res.send('<p>Hello! Here is some JSON that proves you are logged in:<p>');
-  res.send('<p>' + JSON.stringify( req.getAuthDetails() ) + '</p>');
+  res.send('<p>Hello! Here is some JSON that proves you are logged in:<p>' + 
+           '<p>' + JSON.stringify( req.getAuthDetails() ) + '</p>');
 });
 
 var port = process.env.PORT || 4000;
